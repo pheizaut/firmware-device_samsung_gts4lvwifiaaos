@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2021 The LineageOS Project
+# Copyright (C) 2019-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/gts4lv/gts4lv-vendor.mk)
+$(call inherit-product, vendor/samsung/gts4lvwifi/gts4lvwifi-vendor.mk)
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -23,29 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.gts4lv.rc \
-    init.vendor.rilchip.rc \
-    init.vendor.rilcommon.rc
-
-# IPA
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
-
-# RIL
-PRODUCT_PACKAGES += \
-    librmnetctl \
-    libxml2
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
+    init.gts4lvwifi.rc
 
 # Inherit from gts4lv-common
 $(call inherit-product, device/samsung/gts4lv-common/gts4lv.mk)

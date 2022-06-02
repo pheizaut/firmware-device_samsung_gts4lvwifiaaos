@@ -14,7 +14,7 @@ fi
 
 set -e
 
-export DEVICE=gts4lv
+export DEVICE=gts4lvwifi
 export DEVICE_COMMON=gts4lv-common
 export VENDOR=samsung
 
