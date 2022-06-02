@@ -25,7 +25,7 @@ $(call inherit-product, device/samsung/gts4lvwifi/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 # Inherit the car stuff
-$(call inherit-product, device/samsung/gts4lv/car.mk)
+$(call inherit-product, device/samsung/gts4lvwifi/car.mk)
 
 # Inherit Snapp modifications
 $(call inherit-product, device/snappautomotive/common/additions.mk)
